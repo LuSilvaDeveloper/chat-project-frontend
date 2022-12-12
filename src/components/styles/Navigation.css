@@ -1,0 +1,17 @@
+.navBar {
+    background: rgb(244,244,244);
+background: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(238,178,8,0.938813025210084) 49%, rgba(255,255,255,1) 100%);
+}
+
+#fontStyle {
+    font-family: verdana;
+    font-weight: bold;
+    text-decoration: underline overline;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: rgba(42, 68, 85, 0.58);
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: rgb(204, 119, 0) 2px 2px 2px;
+    }
