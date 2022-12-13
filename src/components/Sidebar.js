@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Row, Col, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {ListGroup} from 'react-bootstrap';
 
 function Sidebar() {
     const rooms = ["Chat 1", "Chat 2", "Chat 3"];

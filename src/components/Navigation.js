@@ -27,8 +27,11 @@ function Navigation() {
             </LinkContainer>
             <LinkContainer to="/ideas">
                 <Nav.Link>Project-Ideas</Nav.Link>
-            </LinkContainer>  
-            
+            </LinkContainer>
+            <LinkContainer to="/users">
+              <Nav.Link>Users</Nav.Link>
+            </LinkContainer>
+
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Home</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

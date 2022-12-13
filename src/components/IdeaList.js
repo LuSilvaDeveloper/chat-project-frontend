@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./styles/IdeaList.css";
+import {ListGroup, ListGroupItem} from "react-bootstrap";
 
 function IdeaList(props){
     const [newIdea, setNewIdea] = useState('');
@@ -34,7 +35,11 @@ function IdeaList(props){
         </div>
     );
 
-    return <li className="idea">{viewTemplate}</li>;
+    return (
+        <ListGroup>
+            <ListGroupItem variant='dark'>{viewTemplate}</ListGroupItem>
+        </ListGroup>
+    )
 }
 
 export default IdeaList;
