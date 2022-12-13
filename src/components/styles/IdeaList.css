@@ -16,6 +16,15 @@ button {
     box-shadow: inset 0 0 0 0 #725AC1;
 }
 
+.chatapp {
+    background: rgb(244,244,244);
+    background: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(176,179,208,0.938813025210084) 50%, rgba(255,255,255,1) 100%);
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+}
+
 button:hover {
     color: white;
     box-shadow: inset 0 -100px 0 0 #725AC1;
@@ -32,15 +41,6 @@ button:active {
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
-}
-
-.stack-small {
-    display: inline-block;
-}
-
-li{
-    margin-left: auto;
-    margin-right: auto;
 }
 
 

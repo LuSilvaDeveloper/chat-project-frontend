@@ -3,6 +3,7 @@ import {nanoid} from "nanoid";
 import IdeaList from "../components/IdeaList";
 import Form from "../components/Form";
 import "./styles/Ideas.css"
+import {Col, Container, Row} from "react-bootstrap";
 
 const FILTER_BUTTONS = {
   All: () => true,
@@ -77,24 +78,31 @@ function Ideas(props) {
 
 
   return (
-      <div className="todoapp stack-large">
-        <h1>Project Ideas</h1>
-        <Form
-            addIdea={addIdea}
-            setIdeas={setIdeas}
-        />
-        <h2 id="list-heading" tabIndex="-1" ref={headingRef}>
-          {heading}
-        </h2>
-        <ul
-            role="list"
-            className="todo-list stack-large stack-exception"
-            aria-labelledby="list-heading"
-        >
-          {ideaList}
-        </ul>
+      <Container fluid>
+          <Row>
+              <Col>
+                  <div className="chatapp stack-large">
+                  <h1>Project Ideas</h1>
+                  <Form
+                      addIdea={addIdea}
+                      setIdeas={setIdeas}
+                  />
+                  <h2 id="list-heading" tabIndex="-1" ref={headingRef}>
+                      {heading}
+                  </h2>
+                  <ul
+                      role="list"
+                      className="todo-list stack-large stack-exception"
+                      aria-labelledby="list-heading"
+                  >
+                      {ideaList}
+                  </ul>
 
-      </div>
+                </div>
+              </Col>
+          </Row>
+      </Container>
+
   )
 }
 

@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Chat from "./pages/Chat";
 import Ideas from "./pages/Ideas";
+import Users from "./pages/Users";
 
 function App(props) {
   return (
@@ -17,6 +18,7 @@ function App(props) {
             <Route path="/signup" element={<Signup requestType='POST'/>}  />
             <Route path="/chat" element={<Chat />} />
             <Route path="/ideas" element={<Ideas />} />
+            <Route path="/users" element={<Users />} />
           </Routes>
       </div>
   );
