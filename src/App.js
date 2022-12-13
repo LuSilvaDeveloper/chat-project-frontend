@@ -9,16 +9,16 @@ import Ideas from "./pages/Ideas";
 
 function App(props) {
   return (
-    <BrowserRouter>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login requestType='POST'/>} />
-        <Route path="/signup" element={<Signup requestType='POST'/>}  />
-        <Route path="/chat" element={<Chat />} />
-        <Route path="/ideas" element={<Ideas />} />
-      </Routes>
-    </BrowserRouter>
+      <div className="todoapp stack-large">
+          <Navigation />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login requestType='POST'/>} />
+            <Route path="/signup" element={<Signup requestType='POST'/>}  />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/ideas" element={<Ideas />} />
+          </Routes>
+      </div>
   );
 }
 
