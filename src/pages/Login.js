@@ -5,11 +5,14 @@ import { Col, Row, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import './styles/Login.css';
 import axios from 'axios';
+import SuccessAlert from "../components/SuccessAlert";
+import ErrorAlert from "../components/ErrorAlert";
 
 function Login(props) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [logged, setLogged] = useState();
   const API_endpoint = 'http://localhost:5001/users/login';
   const type = props.requestType;
   const [result, setResult] = useState('');
@@ -19,23 +22,25 @@ function Login(props) {
         try {
            
             await axios.post(API_endpoint, {email: email, password: password})
-            
+            setLogged(true);
             setResult(`New user ${email} added.`)
         } catch(e) {
+            setLogged(false);
             setResult('Error: An invalid request has been made')
         }
     }
 }
 
   function handleLogin(e) {
-     e.preventDefault();
-
-
+     e.preventDefault()
   }
 
   return (
     <Container>
-      <Row>  
+      <Row>
+          <div>
+              {logged ? <SuccessAlert /> : <ErrorAlert />}
+        </div>
         <Col md={5} className="login__bg"></Col>
         <Col md={7} className="d-flex align-items-center justify-content-center flex-direction-column">   
           <Form style={{width: '80%', maxWidth: 500}} onSubmit={handleLogin}>
