@@ -47,9 +47,16 @@ function Signup(props) {
     return (
         <Container>
             <Row>
-                <div>
-                    {success ? <SuccessAlert/> : <ErrorAlert />}
-                </div>
+                {success === undefined ?
+                (
+                    <div></div>
+                ) :
+                (
+                    <div>
+                        {success ? <SuccessAlert name={name} email={email} setSuccess={setSuccess}/> : <ErrorAlert email={email} setSuccess={setSuccess}/>}
+                    </div>
+                )
+                    }
                 <Col md={7} className="d-flex align-items-center justify-content-center flex-direction-column">
                     <Form style={{width: "80%", maxWidth: 500}} onSubmit={handleSignup}>
                         <h1 className="text-center">Create account</h1>
