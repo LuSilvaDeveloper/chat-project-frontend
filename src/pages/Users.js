@@ -7,10 +7,6 @@ function Users(props) {
     const API_endpoint = 'http://localhost:5001/users/';
     console.log(API_endpoint + 'list');
     const type = props.requestType;
-    const GET = 'GET';
-    const GETBYID = 'GETBYID';
-    const GETBYNAME = 'GETBYNAME';
-    const GETBYEMAIL = 'GETBYEMAIL'
     const [result, setResult] = useState('');
     const [input, setInput] = useState('');
     //<li key={index}>ID: {idea.id} Name: {idea.name} Email:{idea.email}</li>
