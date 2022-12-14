@@ -38,9 +38,6 @@ function Login(props) {
   return (
     <Container>
       <Row>
-          <div>
-              {logged ? <SuccessAlert /> : <ErrorAlert />}
-        </div>
         <Col md={5} className="login__bg"></Col>
         <Col md={7} className="d-flex align-items-center justify-content-center flex-direction-column">   
           <Form style={{width: '80%', maxWidth: 500}} onSubmit={handleLogin}>

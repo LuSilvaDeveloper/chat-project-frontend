@@ -6,10 +6,10 @@ function SuccessAlert(props) {
 
     if (show) {
         return (
-            <Alert variant="success" onClose={() => setShow(false)} dismissible>
+            <Alert variant="success" onClose={() => (setShow(false), props.setSuccess())} dismissible>
                 <Alert.Heading>Yeaahh! You Successfully signed up!!"}</Alert.Heading>
                 <p>
-                    Thank you!, everything okay!
+                    Name: {props.name} and Email: {props.email} registered!
                 </p>
             </Alert>
         );

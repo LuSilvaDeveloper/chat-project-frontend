@@ -6,10 +6,10 @@ function SuccessAlert(props) {
 
     if (show) {
         return (
-            <Alert variant="danger" onClose={() => (setShow(false))} dismissible>
+            <Alert variant="danger" onClose={() => (setShow(false), props.setSuccess())} dismissible>
                 <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
                 <p>
-                    Something went wrong! Please, try again!
+                    The Email: {props.email} already exists! Please use a different one.
                 </p>
             </Alert>
         );
