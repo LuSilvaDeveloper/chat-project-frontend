@@ -78,7 +78,7 @@ function Users(props) {
                 (
                     <Row>
                         <Col>
-                            <h2>{GET} HTTP Request</h2>
+                            <h2>{type} HTTP Request</h2>
                             <div>Result from server:
                                 <ul>
                                     {result}
