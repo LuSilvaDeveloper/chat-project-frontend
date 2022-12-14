@@ -18,8 +18,11 @@ function App(props) {
             <Route path="/signup" element={<Signup requestType='POST'/>}  />
             <Route path="/chat" element={<Chat />} />
             <Route path="/ideas" element={<Ideas />} />
-            <Route path="/users" element={<Users key={0} requestType='GETBYID'/>} />
-            <Route path="/users" element={<Users key={1} requestType='GET'/>} />
+            <Route path="/users" element={<><Users key={0} requestType='GET'/>
+                <Users key={1} requestType='GETBYID' />
+                <Users key={2} requestType='GETBYNAME' />
+                <Users key={3} requestType='GETBYEMAIL' />
+            </>} />
 
           </Routes>
       </div>
