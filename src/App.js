@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import Chat from "./pages/Chat";
 import Ideas from "./pages/Ideas";
 import Users from "./pages/Users";
+import Documentation from "./docs/Documentation";
 
 function App(props) {
   return (
@@ -25,7 +26,7 @@ function App(props) {
                 <Users key={2} requestType='GETBYNAME' />
                 <Users key={3} requestType='GETBYEMAIL' />
             </>} />
-
+            <Route path="/documentation" element={<Documentation />} />
           </Routes>
       </div>
   );

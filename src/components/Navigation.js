@@ -31,6 +31,9 @@ function Navigation() {
             <LinkContainer to="/users">
               <Nav.Link>Users</Nav.Link>
             </LinkContainer>
+            <LinkContainer to="/documentation">
+              <Nav.Link>Documentation</Nav.Link>
+            </LinkContainer>
 
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Home</NavDropdown.Item>
